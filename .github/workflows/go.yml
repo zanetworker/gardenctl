@@ -10,6 +10,7 @@ jobs:
     steps:
       - name: Send update with latest versions to gardener/homebrew-tap
         run: |
+          env
           curl -X POST https://api.github.com/repos/zanetworker/homebrew-tap/dispatches \
           -H 'Accept: application/vnd.github.everest-preview+json' \
           -u ${{ secrets.ACCESS_TOKEN }} \
